@@ -16,10 +16,6 @@
   border-radius: 0.4rem;
 }
 
-.hidden {
-  display: none;
-}
-
 body {
   width: 100vw;
   height: 93vh;
@@ -98,6 +94,10 @@ select {
   background: var(--color-light);
 }
 
+.form__btn {
+  display: none;
+}
+
 option {
   color: var(--color-light);
   background: var(--bg-primary);
@@ -113,6 +113,7 @@ option {
   list-style: none;
   overflow-y: scroll;
   overflow-x: hidden;
+  /* background: #fff; */
 }
 
 .workout__form::-webkit-scrollbar {

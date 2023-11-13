@@ -137,7 +137,7 @@ class App {
 
     form.style.display = 'none';
     form.classList.add('hidden');
-    setTimeout(() => (form.style.display = 'grid'), 1000);
+    setTimeout(() => (form.style.display = 'grid'), 500);
   }
 
   // Render Marker On Map
@@ -194,7 +194,7 @@ class App {
 
       if (
         !validInput(distance, duration, elevation) ||
-        validNum(distance, duration, elevation)
+        !validNum(distance, duration, elevation)
       )
         return alert(`Inputs must be positive numbers`);
 
@@ -320,4 +320,5 @@ class App {
   }
 }
 
+// create the main app object
 const app = new App();
