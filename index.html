@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fit | Track Your Workout In Real-Time</title>
+
+    <link rel="icon" type="image/x-icon" href="/fitlogo.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <div class="asidebar">
+        <img class="radius" src="/fitlogo.jpg" alt="brand__logo" />
+        <ul class="workout__form">
+          <form class="form hidden radius">
+            <div class="form__item">
+              <label class="form__label" for="type">Type</label>
+              <select class="form__input--type" name="select" id="select">
+                <option value="running">Running</option>
+                <option value="cycling">Cycling</option>
+              </select>
+            </div>
+            <div class="form__item">
+              <label class="form__label">Distance</label>
+              <input
+                class="input__field input__field--distance"
+                type="text"
+                placeholder="km"
+              />
+            </div>
+            <div class="form__item">
+              <label class="form__label">Duration</label>
+              <input
+                class="input__field input__field--duration"
+                type="text"
+                placeholder="min"
+              />
+            </div>
+            <div class="form__item">
+              <label class="form__label">Cadence</label>
+              <input
+                type="text"
+                class="input__field input__field--cadence"
+                placeholder="step/min"
+              />
+            </div>
+            <div class="form__item form__item--hidden">
+              <label class="form__label">ElevGain</label>
+              <input
+                type="text"
+                class="input__field input__field--elev"
+                placeholder="meters"
+              />
+            </div>
+          </form>
+
+          <!-- <li class="workout workout--running data-id='5461238400' radius">
+            <p class="title">Running on November 11</p>
+            <div>
+              <div class="workout__details">
+                <span class="icon">🏃‍♂️</span>
+                <span class="time">8</span>
+                <span class="unit">km</span>
+              </div>
+              <div class="workout__details">
+                <span class="icon">⏱️</span>
+                <span class="time">9</span>
+                <span class="unit">min</span>
+              </div>
+              <div class="workout__details">
+                <span class="icon">⚡</span>
+                <span class="time">9</span>
+                <span class="unit">min/km</span>
+              </div>
+              <div class="workout__details">
+                <span class="icon">🦶</span>
+                <span class="steps">8</span>
+                <span class="unit">spm</span>
+              </div>
+            </div>
+          </li> -->
+
+          <!-- <li class="workout workout--cycling data-id='5461238410' radius">
+            <p class="title">Cycling on November 14</p>
+            <div>
+              <div class="workout__details">
+                <span class="icon">🚴‍♂️</span>
+                <span class="time">8</span>
+                <span class="unit">km</span>
+              </div>
+              <div class="workout__details">
+                <span class="icon">⏱️</span>
+                <span class="time">9</span>
+                <span class="unit">min</span>
+              </div>
+              <div class="workout__details">
+                <span class="icon">⚡</span>
+                <span class="time">9</span>
+                <span class="unit">min/km</span>
+              </div>
+              <div class="workout__details">
+                <span class="icon">🗻</span>
+                <span class="steps">8</span>
+                <span class="unit">m</span>
+              </div>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+
+      <div id="map"></div>
+    </div>
+  </body>
+</html>
